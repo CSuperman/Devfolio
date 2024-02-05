@@ -1,3 +1,16 @@
+/*
+
+Prototyping a main component for a "devfolio"
+
+The idea is it is almost too easy to view more
+items, perhaps even accidently. Project pics
+will load. One of them will probably be GIF
+based. The point is to be seen and I think
+this accomplishes that.
+
+*/
+
+
 import React, { useState } from "react";
 
 const hrPortfolio = {
