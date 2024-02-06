@@ -12,6 +12,7 @@ this accomplishes that.
 
 
 import React, { useState } from "react";
+import './folioCategory.css';
 
 const hrPortfolio = {
   name: "HR Portfolio",
@@ -44,33 +45,35 @@ export default function MyButton() {
   }
 
   return (
-    <div onMouseLeave={handleMouseLeave}>
-      <button onMouseEnter={() => handleHover("HR")}>HR Portfolio</button>
-      {hoveredType === "HR" && (
-        <>
-          <a href={hrPortfolio.url} target="_blank" rel="noopener noreferrer">
-            {hrPortfolio.name}
-          </a>
-          <ul>
-            {hrPortfolio.items.map((item) => (
-              <li key={item.name}>{item.name}</li>
-            ))}
-          </ul>
-        </>
-      )}
-      <button onMouseEnter={() => handleHover("nerds")}>Nerdfolio</button>
-      {hoveredType === "nerds" && (
-        <>
-          <a href={nerdFolio.url} target="_blank" rel="noopener noreferrer">
-            {nerdFolio.name}
-          </a>
-          <ul>
-            {nerdFolio.items.map((item) => (
-              <li key={item.whatever}>{item.whatever}</li>
-            ))}
-          </ul>
-        </>
-      )}
-    </div>
+    <div className="my-button-container">
+        <div onMouseLeave={handleMouseLeave}>
+          <button onMouseEnter={() => handleHover("HR")}>HR Portfolio</button>
+          {hoveredType === "HR" && (
+            <>
+              <a href={hrPortfolio.url} target="_blank" rel="noopener noreferrer">
+                {hrPortfolio.name}
+              </a>
+              <ul>
+                {hrPortfolio.items.map((item) => (
+                  <li key={item.name}>{item.name}</li>
+                ))}
+              </ul>
+            </>
+          )}
+          <button onMouseEnter={() => handleHover("nerds")}>Nerdfolio</button>
+          {hoveredType === "nerds" && (
+            <>
+              <a href={nerdFolio.url} target="_blank" rel="noopener noreferrer">
+                {nerdFolio.name}
+              </a>
+              <ul>
+                {nerdFolio.items.map((item) => (
+                  <li key={item.whatever}>{item.whatever}</li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      </div>
   );
 }
