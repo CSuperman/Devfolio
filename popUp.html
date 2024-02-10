@@ -1,3 +1,39 @@
+<button id="myBtn" aria-controls="myModal" aria-expanded="false">Open </button>
+
+<div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Modal Title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCrWmMWluEq5zbeE0QF6XcTBgZydMIdOnJU6e88Haw_4SpHg/viewform?embedded=true" width="640" height="574" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+$(document).ready(function() {
+  $('#myBtn').click(function() {
+    $('#myModal').modal('show');
+  });
+});
+
+</script>
+
+
+<style>
+
+
 
 .modal {
   display: none; 
@@ -47,3 +83,5 @@
 .modal-content:focus {
   outline: 2px solid #007bff; /* Focus indicator */
 }
+
+</style>
