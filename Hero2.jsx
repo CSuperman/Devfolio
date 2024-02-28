@@ -16,7 +16,7 @@ export default function Hero() {
     <div className="hero" id="hero">
       <div className="left">
         <div className="img">
-          <img src="" alt="" />
+          <img src="" alt="your image" />      // place your own image
         </div>
       </div>
       <div className="right">
@@ -28,7 +28,7 @@ export default function Hero() {
           </h4>
         </div>
         <a href="#portfolio">
-          <img src="" alt="" />
+          <img src="" alt="your portfolio" />    // place your own image
         </a>
       </div>
     </div>
